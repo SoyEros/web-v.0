@@ -18,23 +18,21 @@
 
 <section class="hero">
   <h2>Contacto</h2>
-  <p>¿Querés tu página web? Escribime 👇</p>
+  <p>Escribime directo por WhatsApp 👇</p>
 </section>
 
 <section class="contacto">
-  <form onsubmit="enviarFormulario(event)">
+  <form onsubmit="enviarWhatsApp(event)">
     
-    <input type="text" placeholder="Tu nombre" required><br><br>
+    <input type="text" id="nombre" placeholder="Tu nombre" required><br><br>
     
-    <input type="email" placeholder="Tu email" required><br><br>
+    <input type="email" id="email" placeholder="Tu email" required><br><br>
     
-    <textarea placeholder="Tu mensaje" rows="5" required></textarea><br><br>
+    <textarea id="mensaje" placeholder="¿Qué necesitás?" rows="5" required></textarea><br><br>
     
-    <button type="submit">Enviar</button>
+    <button type="submit">Enviar por WhatsApp</button>
 
   </form>
-
-  <p id="mensajeEnviado"></p>
 </section>
 
 <footer>
@@ -42,9 +40,20 @@
 </footer>
 
 <script>
-function enviarFormulario(e) {
+function enviarWhatsApp(e) {
   e.preventDefault();
-  document.getElementById("mensajeEnviado").innerText = "Mensaje enviado ✅ (simulado)";
+
+  let nombre = document.getElementById("nombre").value;
+  let email = document.getElementById("email").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = `Hola, soy ${nombre}%0AEmail: ${email}%0A%0AMensaje: ${mensaje}`;
+
+  let numero = "+5491167420214";
+
+  let url = `https://wa.me/${numero}?text=${texto}`;
+
+  window.open(url, "_blank");
 }
 </script>
 
