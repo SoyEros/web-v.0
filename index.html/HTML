@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>WebHost Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>WebHost Pro</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="pages/servicios.html">Servicios</a>
+    <a href="pages/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Diseños web + Hosting</h2>
+  <p>Creamos tu página y la dejamos online en minutos</p>
+  <button onclick="verServicios()">Ver servicios</button>
+</section>
+
+<section class="productos">
+  <h2>Planes</h2>
+
+  <div class="card">
+    <h3>Landing Page</h3>
+    <p>Ideal para empezar</p>
+    <span>$50 USD</span>
+  </div>
+
+  <div class="card">
+    <h3>Web Profesional</h3>
+    <p>Para negocios</p>
+    <span>$120 USD</span>
+  </div>
+
+  <div class="card">
+    <h3>E-commerce</h3>
+    <p>Tienda online completa</p>
+    <span>$250 USD</span>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 WebHost Pro</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
