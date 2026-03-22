@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - WebHost Pro</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <h1>WebHost Pro</h1>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Contacto</h2>
+  <p>¿Querés tu página web? Escribime 👇</p>
+</section>
+
+<section class="contacto">
+  <form onsubmit="enviarFormulario(event)">
+    
+    <input type="text" placeholder="Tu nombre" required><br><br>
+    
+    <input type="email" placeholder="Tu email" required><br><br>
+    
+    <textarea placeholder="Tu mensaje" rows="5" required></textarea><br><br>
+    
+    <button type="submit">Enviar</button>
+
+  </form>
+
+  <p id="mensajeEnviado"></p>
+</section>
+
+<footer>
+  <p>© 2026 WebHost Pro</p>
+</footer>
+
+<script>
+function enviarFormulario(e) {
+  e.preventDefault();
+  document.getElementById("mensajeEnviado").innerText = "Mensaje enviado ✅ (simulado)";
+}
+</script>
+
+</body>
+</html>
